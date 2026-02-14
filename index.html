@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>AI4L Workshop 2026 — Robust ML Systems</title>
+<meta content="AI4L Workshop 2026: An Empirical Framework for Robust Machine Learning Systems and its Application in AI4L." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="workshop.css" rel="stylesheet">
+</link></head>
+<body>
+<header class="site-header">
+<div class="container header-inner">
+
+<button aria-controls="navMenu" aria-expanded="false" aria-label="Open menu" class="nav-toggle" id="navToggle" type="button">
+<span aria-hidden="true"></span>
+<span aria-hidden="true"></span>
+<span aria-hidden="true"></span>
+</button>
+<nav class="nav" id="navMenu">
+<a class="nav__link" href="#about">About</a>
+<a class="nav__link" href="#schedule">Schedule</a>
+<a class="nav__link" href="#speakers">Keynotes &amp; Presenters</a>
+<a class="nav__link" href="#people">Organizers&amp;TeamMembers</a>
+<a class="nav__link" href="#venue">Venue</a>
+<a class="nav__link" href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+<div class="online-strip">
+<div class="container online-strip__inner">
+<span class="online-strip__label">Online:</span>
+<a class="mono online-strip__link" href="#" id="meetingLinkTop" rel="noopener" target="_blank">TBA</a>
+<button class="btn btn-ghost btn-small" id="copyMeetingTop" type="button">Copy</button>
+</div>
+</div>
+<main id="top">
+<!-- Hero -->
+<section class="hero hero-collage">
+<div aria-hidden="true" class="hero-collage__grid">
+<div class="hero-tile hero-tile--1"></div>
+<div class="hero-tile hero-tile--2"></div>
+<div class="hero-tile hero-tile--3"></div>
+<div class="hero-tile hero-tile--4"></div>
+</div>
+<div aria-hidden="true" class="hero-collage__overlay"></div>
+<div class="container hero-collage__content">
+<div class="hero-kicker">AI4L Workshop</div>
+<h1>An Empirical Framework for Robust Machine Learning Systems and its Application in AI4L</h1>
+<p class="hero-subtitle">
+          A hybrid workshop featuring keynotes, technical sessions, and community discussions on robust and trustworthy AI.
+        </p>
+<div class="hero-info">
+<div class="hero-info__line"><strong>March 12, 2026</strong></div>
+<div class="hero-info__line">
+<span class="time-pair">11:30–16:10 <span class="tz">ET</span></span>
+<span class="sep">/</span>
+<span class="time-pair">08:30–13:10 <span class="tz">PT</span></span>
+</div>
+<div class="hero-info__line">Toronto • Vancouver • Online</div>
+</div>
+<nav aria-label="Page sections" class="hero-pills">
+<a class="hero-pill" href="#about">Overview</a>
+<a class="hero-pill" href="#schedule">Schedule</a>
+<a class="hero-pill" href="#speakers">Keynote Speakers &amp; Presenters</a>
+<a class="hero-pill" href="#people">Organizers &amp; Team Members</a>
+<a class="hero-pill" href="#venue">Venue</a>
+<a class="hero-pill" href="#contact">Contact</a>
+</nav>
+</div>
+</section>
+<!-- About -->
+<section class="section section-soft section-about" id="about">
+<div class="container">
+<h2>About</h2>
+<div class="prose">
+<p>
+            This workshop discusses an empirical framework for building robust machine learning systems and its application in AI4L.
+            The agenda includes invited talks, technical presentations, and opportunities for networking and collaboration.
+          </p>
+</div>
+<div class="grid grid-2 about-grid" style="margin-top:14px;">
+
+<div class="card">
+<h3 style="margin:0 0 8px;">Project Acknowledgement</h3>
+<p style="margin:0;">
+              ML technologies have been widely adopted across mission-critical domains. Alongside the success of these technologies,
+              deployment introduces significant security and privacy threats. Policymakers are developing regulatory frameworks to enforce
+              AI cybersecurity and privacy requirements, making robust evaluation and compliance increasingly critical.
+            </p>
+</div>
+<div class="card">
+<h3 style="margin:0 0 8px;">Project Objectives</h3>
+<ul style="margin:0; padding-left:18px;">
+<li>Develop a taxonomy of ML model/data attacks &amp; defenses</li>
+<li>Build an Adversarial ML Threat Matrix</li>
+<li>Devise defenses for OOD/evasion/poisoning/MIA/AIA, etc.</li>
+<li>Prototype an evaluation framework for robustness</li>
+<li>Collect &amp; test open-source security tools</li>
+<li>Curate ground-truth datasets for evaluation</li>
+</ul>
+</div>
+</div><div class="funding-banner"><strong>Funding Support: </strong>Supported by collaborative research funding from the National Research Council of Canada’s Artificial Intelligence for Logistics Program.</div>
+</div>
+</section>
+<!-- Schedule -->
+<section class="section section-soft section-sides section-sides--agenda" id="schedule">
+<div class="container">
+<div class="section-head">
+<h2>Schedule</h2>
+<p class="subhead">Search and filter the agenda (times shown as ET / PT).</p>
+</div>
+<div class="controls">
+<input class="input" id="agendaSearch" placeholder="Search agenda (title, speaker, keyword)..." type="search"/>
+<div aria-label="Agenda filters" class="chips" id="agendaChips">
+<button class="chip is-active" data-type="ALL" type="button">All</button>
+<button class="chip" data-type="KEYNOTE" type="button">Keynotes</button>
+<button class="chip" data-type="TECH" type="button">Technical</button>
+<button class="chip" data-type="NETWORK" type="button">Networking</button>
+<button class="chip" data-type="BREAK" type="button">Breaks</button>
+</div>
+</div>
+<div aria-live="polite" class="schedule-list" id="agendaList"></div>
+</div>
+</section>
+<!-- Speakers -->
+<section class="section" id="speakers">
+<div class="container">
+<div class="section-head">
+<h2>Keynote Speakers &amp; Presenters</h2>
+<div class="section-head__right">
+<span class="muted" id="speakerCount">—</span>
+</div>
+</div>
+<div class="controls">
+<input class="input" id="speakerSearch" placeholder="Search speakers (name, topic, keyword)..." type="search"/>
+</div>
+<div class="grid grid-3" id="speakerGrid"></div>
+</div>
+</section>
+<!-- People -->
+<section class="section section-soft section-sides section-sides--people" id="people">
+<div class="container">
+<div class="section-head">
+<h2>Organizers &amp; Team Members</h2>
+<p class="subhead">Photos and profile links for organizers and participants.</p>
+</div>
+<div class="controls">
+<input class="input" id="peopleSearch" placeholder="Search people (name, affiliation)..." type="search"/>
+<div aria-label="People filters" class="chips" id="peopleChips">
+<button class="chip is-active" data-group="ALL" type="button">All</button>
+<button class="chip" data-group="ORGANIZER" type="button">Organizers</button>
+<button class="chip" data-group="PARTICIPANT" type="button">Participants</button>
+</div>
+</div>
+<div class="grid grid-3" id="peopleGrid"></div>
+</div>
+</section>
+<!-- Venue -->
+<section class="section" id="venue">
+<div class="container">
+<h2>Venue</h2>
+<div class="venue-grid">
+<article class="venue-card">
+<h3>Toronto</h3>
+<p class="muted">In-person hub (details to be confirmed)</p>
+<ul class="list">
+<li><strong>City:</strong> <a class="link" href="https://www.google.com/maps?q=Toronto%2C%20Ontario" rel="noopener" target="_blank">Toronto, Ontario</a></li>
+<li><strong>Format:</strong> Hybrid / In-person</li>
+</ul>
+</article>
+<article class="venue-card">
+<h3>Vancouver</h3>
+<p class="muted">In-person hub (details to be confirmed)</p>
+<ul class="list">
+<li><strong>City:</strong> <a class="link" href="https://www.google.com/maps?q=Vancouver%2C%20British%20Columbia" rel="noopener" target="_blank">Vancouver, British Columbia</a></li>
+<li><strong>Format:</strong> Hybrid / In-person</li>
+</ul>
+</article>
+<article class="venue-card">
+<h3>Online</h3>
+<p class="muted">Meeting link will be shared with registrants.</p>
+<div class="meeting-row">
+<a class="mono link" href="#" id="meetingLink" rel="noopener" target="_blank">TBA</a>
+<button class="btn btn-ghost btn-small" id="copyMeeting" type="button">Copy</button>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Contact -->
+<section class="section section-soft" id="contact">
+<div class="container">
+<div class="section-head">
+<h2>Contact</h2>
+<p class="subhead">Questions, collaboration ideas, or media requests.</p>
+</div>
+<div class="contact-card">
+<div>
+<div class="muted">Email</div>
+<div class="mono">TBA</div>
+</div>
+<div class="muted small">Please contact the organizers during registration or via the event announcement.</div>
+</div>
+<p class="footnote">
+          © 2026 AI4L Workshop. Built for GitHub Pages.
+        </p>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-inner">
+<div class="footer-left">
+<div class="footer-brand">AI4L Workshop 2026</div>
+<div class="muted small">Hybrid workshop (Toronto • Vancouver • Online).</div>
+</div>
+<div class="footer-right">
+<div class="muted small">Online</div>
+<div class="footer-online">
+<a class="mono link" href="#" id="meetingLinkBottom" rel="noopener" target="_blank">TBA</a>
+<button class="btn btn-ghost btn-small" id="copyMeetingBottom" type="button">Copy</button>
+</div>
+</div>
+</div>
+</footer>
+<button aria-label="Back to top" class="to-top" id="toTop" type="button">↑</button>
+<script defer="" src="workshop.js"></script>
+</body>
+</html>
