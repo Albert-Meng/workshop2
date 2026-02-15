@@ -1,6 +1,8 @@
 :root{
   --bg: #ffffff;
-  --bg-soft:#f6f7fb;
+  --bg-soft: #eef2fb;
+  --bg-page: #f2f5ff;
+  --bg-page-2: #f7f9ff;
   --text:#0f172a;
   --muted:#475569;
   --border:#e5e7eb;
@@ -20,7 +22,7 @@ body{
   margin:0;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
   color:var(--text);
-  background:var(--bg);
+  background: radial-gradient(1200px 650px at 12% -10%, rgba(91,91,214,.12), transparent 55%),radial-gradient(900px 520px at 88% 6%, rgba(22,163,255,.10), transparent 60%),linear-gradient(180deg, var(--bg-page) 0%, #ffffff 55%, var(--bg-page-2) 100%);
   line-height:1.55;
 }
 
@@ -261,12 +263,45 @@ h1{
 /* Sections */
 .section{
   padding:58px 0;
+  position:relative;
+  overflow:hidden;
 }
 .section-soft{
-  background:var(--bg-soft);
-  border-top:1px solid var(--border);
-  border-bottom:1px solid var(--border);
+  --section-bg-image: none;
+  --section-tint: rgba(2,132,199,0.14);
+
+  background-image:
+    radial-gradient(1200px 520px at 10% 0%,
+      rgba(255,255,255,0.48) 0%,
+      rgba(255,255,255,0.08) 46%,
+      rgba(255,255,255,0.00) 74%
+    ),
+    linear-gradient(180deg,
+      var(--section-tint) 0%,
+      rgba(255,255,255,0.08) 46%,
+      rgba(255,255,255,0.60) 100%
+    ),
+    var(--section-bg-image);
+
+  background-size: auto, auto, cover;
+  background-position: top left, top, center;
+  background-repeat: no-repeat;
+  background-color: var(--bg-soft);
+
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
+
+
+/* Section-specific backgrounds (darker + distinct per section) */
+#about.section-soft{ --section-bg-image: url("assets/bg/bg-about.webp"); --section-tint: rgba(37,99,235,0.16); }
+#schedule.section-soft{ --section-bg-image: url("assets/bg/bg-schedule.webp"); --section-tint: rgba(16,185,129,0.16); }
+#speakers.section-soft{ --section-bg-image: url("assets/bg/bg-speakers.webp"); --section-tint: rgba(245,158,11,0.15); }
+#people.section-soft{ --section-bg-image: url("assets/bg/bg-people.webp"); --section-tint: rgba(6,182,212,0.17); }
+#venue.section-soft{ --section-bg-image: url("assets/bg/bg-venue.webp"); --section-tint: rgba(56,189,248,0.16); }
+#contact.section-soft{ --section-bg-image: url("assets/bg/bg-contact.webp"); --section-tint: rgba(100,116,139,0.17); }
+
+
 .section-head{
   display:flex;
   align-items:flex-end;
@@ -711,23 +746,23 @@ h3{ margin:0 0 8px; }
 .section-sides--agenda::before{
   left:-280px;
   background-image:url("assets/ai-neural.webp");
-  opacity:.11;
+  opacity:.13;
 }
 .section-sides--agenda::after{
   right:-280px;
   background-image:url("assets/ai-neural.webp");
-  opacity:.11;
+  opacity:.13;
   transform: scaleX(-1);
 }
 .section-sides--people::before{
   left:-300px;
   background-image:url("assets/llm-ai-gettyimages-2149059417.webp");
-  opacity:.10;
+  opacity:.12;
 }
 .section-sides--people::after{
   right:-300px;
   background-image:url("assets/llm-ai-gettyimages-2149059417.webp");
-  opacity:.10;
+  opacity:.12;
   transform: scaleX(-1);
 }
 
@@ -741,6 +776,42 @@ h3{ margin:0 0 8px; }
   pointer-events:none;
 }
 
+
+.section-sides--speakers::before{
+  left:-360px;
+  background-image:url("assets/llm-001-da6e9df83e520a18f43984ad5118b9a7.png");
+  opacity:.12;
+}
+.section-sides--speakers::after{
+  right:-360px;
+  background-image:url("assets/ai-neural.webp");
+  opacity:.11;
+  transform:scaleX(-1);
+}
+
+.section-sides--venue::before{
+  left:-360px;
+  background-image:url("assets/ai-chip.avif");
+  opacity:.12;
+}
+.section-sides--venue::after{
+  right:-360px;
+  background-image:url("assets/ai-tunnel.avif");
+  opacity:.11;
+  transform:scaleX(-1);
+}
+
+.section-sides--contact::before{
+  left:-360px;
+  background-image:url("assets/ai-silhouette.png");
+  opacity:.11;
+}
+.section-sides--contact::after{
+  right:-360px;
+  background-image:url("assets/llm-ai-gettyimages-2149059417.webp");
+  opacity:.10;
+  transform:scaleX(-1);
+}
 
 
 /* =========================
@@ -1017,41 +1088,13 @@ details[open].schedule-item summary::after{
    About section background + layout
    ========================= */
 .section-about{
-  position:relative;
-  overflow:hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 /* Keep the background mostly in the lower area so heading/intro stays crisp */
 
-.section-about::before{
-  content:"";
-  position:absolute;
-  inset:-6%;
-  background: url("assets/llm-ai-gettyimages-2149059417.webp") center 70%/cover no-repeat;
-  /* Deep-but-soft look, keeps contrast for the white cards */
-  opacity:0.34;
-  filter: saturate(1.06) contrast(1.10) brightness(0.60);
-  transform: rotate(-0.8deg) scale(1.08);
-  transform-origin: 50% 70%;
-  pointer-events:none;
-}
-
 /* Strong top wash for readability + gentle vignette */
-.section-about::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(180deg,
-      rgba(255,255,255,0.98) 0%,
-      rgba(255,255,255,0.94) 34%,
-      rgba(255,255,255,0.78) 62%,
-      rgba(255,255,255,0.52) 100%
-    ),
-    radial-gradient(900px 260px at 18% 18%, rgba(255,255,255,0.86), transparent 72%),
-    radial-gradient(900px 260px at 82% 18%, rgba(255,255,255,0.86), transparent 72%);
-  pointer-events:none;
-}
 .section-about .container{
   position:relative;
   z-index:1;
