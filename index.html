@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Workshop on Robust Machine Learning Systems and Its Applications</title>
+<meta content="Workshop on Robust Machine Learning Systems and Its Applications — a workshop on robust and trustworthy machine learning, security, privacy, and evaluation frameworks." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="workshop.css" rel="stylesheet"/>
+</head>
+<body>
+<header class="site-header">
+<div class="container header-inner">
+<button aria-controls="navMenu" aria-expanded="false" aria-label="Open menu" class="nav-toggle" id="navToggle" type="button">
+<span aria-hidden="true"></span>
+<span aria-hidden="true"></span>
+<span aria-hidden="true"></span>
+</button>
+<nav class="nav" id="navMenu">
+<a class="nav__link" href="#about">About</a>
+<a class="nav__link" href="#schedule">Schedule</a>
+<a class="nav__link" href="#keynote-speakers">Keynote Speakers</a>
+<a class="nav__link" href="#technical-presenters">Technical Presenters</a>
+<a class="nav__link" href="#people">Organizers &amp; Team Members</a>
+<a class="nav__link" href="#venue">Venue</a>
+<a class="nav__link" href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+<div class="online-strip">
+<div class="container online-strip__inner">
+<span class="online-strip__label">Online:</span>
+<a class="mono online-strip__link" href="#" id="meetingLinkTop" rel="noopener" target="_blank">TBA</a>
+<button class="btn btn-ghost btn-small" id="copyMeetingTop" type="button">Copy</button>
+</div>
+</div>
+<main id="top">
+<!-- Hero -->
+<section class="hero hero-collage">
+<div aria-hidden="true" class="hero-collage__grid">
+<div class="hero-tile hero-tile--1"></div>
+<div class="hero-tile hero-tile--2"></div>
+<div class="hero-tile hero-tile--3"></div>
+<div class="hero-tile hero-tile--4"></div>
+</div>
+<div aria-hidden="true" class="hero-collage__overlay"></div>
+<div class="container hero-collage__content">
+<div class="hero-kicker">Robust AI Workshop</div>
+<h1>Workshop on Robust Machine Learning Systems and Its Applications</h1>
+<p class="hero-subtitle">
+          A hybrid workshop featuring keynotes, technical sessions, and community discussions on robust and trustworthy
+          AI.
+        </p>
+<div class="hero-info">
+<div class="hero-info__line"><strong>March 12, 2026</strong></div>
+<div class="hero-info__line">
+<span class="time-pair">11:30–16:10 <span class="tz">ET</span></span>
+<span class="sep">/</span>
+<span class="time-pair">08:30–13:10 <span class="tz">PT</span></span>
+</div>
+<div class="hero-info__line">Toronto • Vancouver • Online</div>
+</div>
+<nav aria-label="Page sections" class="hero-pills">
+<a class="hero-pill" href="#about">Overview</a>
+<a class="hero-pill" href="#schedule">Schedule</a>
+<a class="hero-pill" href="#speakers">Keynote Speakers &amp; Presenters</a>
+<a class="hero-pill" href="#people">Organizers &amp; Team Members</a>
+<a class="hero-pill" href="#venue">Venue</a>
+<a class="hero-pill" href="#contact">Contact</a>
+</nav>
+</div>
+</section>
+<!-- About -->
+<section class="section section-about" id="about">
+  <div class="container">
+    <h2 class="about-title">Workshop Background</h2>
+
+    <div class="card about-card">
+      <p class="lead">This workshop focuses on robust machine learning systems and its applications. The agenda includes invited talks, technical presentations, and opportunities for networking and collaboration.</p>
+      <p>Machine learning (ML) technologies have been widely adopted across mission-critical domains, including logistics, transportation, and industrial systems. While these systems offer significant benefits in efficiency and automation, their deployment also introduces substantial security and privacy risks, such as adversarial attacks, data leakage, and model exploitation. In response, a wide range of defense mechanisms—including robust training techniques, secure model inference, and privacy-preserving learning methods—have been proposed to mitigate these threats. At the same time, policymakers and regulatory bodies are establishing regulatory frameworks to enforce cybersecurity, privacy, and accountability requirements for AI systems. These developments highlight the urgent need for effective defense mechanisms, along with systematic evaluation methodologies and practical frameworks, to rigorously assess the security and reliability of ML systems and ensure their robustness, trustworthiness, and regulatory compliance in real-world deployments.</p>
+    </div>
+  </div>
+</section>
+<!-- Sponsors -->
+<section class="section section-soft sponsors-section" id="sponsors">
+<div class="container">
+<h2>Organizing Institutions</h2>
+<div class="sponsors-grid">
+<div class="sponsor-logo sponsor-logo--nrc">
+<img alt="National Research Council of Canada" src="assets/logo-nrc.png"/>
+</div>
+<div class="sponsor-logo">
+<img alt="Simon Fraser University" src="assets/logo-sfu.png"/>
+</div>
+<div class="sponsor-logo">
+<img alt="University of Guelph" src="assets/logo-uog.png"/>
+</div>
+<div class="sponsor-logo">
+<img alt="York University" src="assets/logo-york.png"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Schedule -->
+<section class="section section-soft section-sides section-sides--agenda" id="schedule">
+<div class="container">
+<div class="section-head">
+  <div>
+    <h2>Schedule</h2>
+    <p class="subhead">Search and filter the agenda (times shown as ET / PT).</p>
+  </div>
+
+  <div class="section-head__right">
+    <button class="btn btn-primary btn-small" id="downloadSchedulePdf" type="button">
+      Download PDF
+    </button>
+  </div>
+</div>
+<div class="controls">
+<input class="input" id="agendaSearch" placeholder="Search agenda (title, speaker, keyword)..." type="search"/>
+<div aria-label="Agenda filters" class="chips" id="agendaChips">
+<button class="chip is-active" data-type="ALL" type="button">All</button>
+<button class="chip" data-type="KEYNOTE" type="button">Keynotes</button>
+<button class="chip" data-type="TECH" type="button">Technical</button>
+<button class="chip" data-type="NETWORK" type="button">Networking</button>
+<button class="chip" data-type="BREAK" type="button">Breaks</button>
+</div>
+</div>
+<div aria-live="polite" class="schedule-list" id="agendaList"></div>
+</div>
+</section>
+<!-- Keynote Speakers -->
+<section class="section section-soft section-sides section-sides--speakers" id="keynote-speakers">
+<div class="container">
+<h2>Keynote Speakers</h2>
+<div class="grid grid-2" id="keynoteGrid"></div>
+</div>
+</section>
+<!-- Technical Presenters -->
+<section class="section section-soft section-sides section-sides--speakers" id="technical-presenters">
+<div class="container">
+<div class="section-head">
+<h2>Technical Presenters</h2>
+<div class="section-head__right">
+<span class="muted" id="techPresenterCount">—</span>
+</div>
+</div>
+<div class="controls">
+<input class="input" id="techPresenterSearch" placeholder="Search presenters (name, topic, keyword)..." type="search"/>
+</div>
+<div class="grid grid-3" id="techPresenterGrid"></div>
+</div>
+</section>
+<!-- People -->
+<section class="section section-soft section-sides section-sides--people" id="people">
+<div class="container">
+<div class="section-head">
+<h2>Organizers &amp; Team Members</h2>
+<p class="subhead">Photos and profile links for organizers and team members.</p>
+</div>
+<div class="controls">
+<input class="input" id="peopleSearch" placeholder="Search people (name, affiliation)..." type="search"/>
+<div aria-label="People filters" class="chips" id="peopleChips">
+<button class="chip is-active" data-group="ALL" type="button">All</button>
+<button class="chip" data-group="ORGANIZER" type="button">Organizers</button>
+<button class="chip" data-group="TEAM" type="button">Team Members</button>
+</div>
+</div>
+<div class="grid grid-3" id="peopleGrid"></div>
+</div>
+</section>
+<!-- Venue -->
+<section class="section section-soft section-sides section-sides--venue" id="venue">
+<div class="container">
+<h2>Venue</h2>
+<div class="venue-grid">
+<article class="venue-card">
+<h3>Toronto</h3>
+<p class="muted">Victor Phillip Dahdaleh Building (DB) 2027, Keele campus, York University</p>
+<ul class="list">
+<li><strong>City:</strong> <a class="link" href="https://www.google.com/maps?q=Toronto%2C%20Ontario" rel="noopener" target="_blank">Toronto, Ontario</a></li>
+<li><strong>Format:</strong> Hybrid / In-person</li>
+</ul>
+</article>
+<article class="venue-card">
+<h3>Vancouver</h3>
+<p class="muted">In-person hub (details to be confirmed)</p>
+<ul class="list">
+<li><strong>City:</strong> <a class="link" href="https://www.google.com/maps?q=Vancouver%2C%20British%20Columbia" rel="noopener" target="_blank">Vancouver, British Columbia</a></li>
+<li><strong>Format:</strong> Hybrid / In-person</li>
+</ul>
+</article>
+<article class="venue-card">
+<h3>Online</h3>
+<p class="muted">Meeting link will be shared with registrants.</p>
+<div class="meeting-row">
+<a class="mono link" href="#" id="meetingLink" rel="noopener" target="_blank">TBA</a>
+<button class="btn btn-ghost btn-small" id="copyMeeting" type="button">Copy</button>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Contact -->
+<section class="section section-soft section-sides section-sides--contact" id="contact">
+<div class="container">
+<div class="section-head">
+<h2>Contact</h2>
+<p class="subhead">Questions, collaboration ideas, or media requests.</p>
+</div>
+<div class="contact-card">
+<div class="contact-person">
+  <div class="muted">Contact</div>
+  <div class="contact-name">Assistant Prof. Liang Xue</div>
+  <div class="contact-role muted">Organizer / Presenter • York University</div>
+</div>
+<div class="contact-email">
+  <div class="muted">Email</div>
+  <div class="mono"><a class="link" href="mailto:lxue03@yorku.ca">lxue03@yorku.ca</a></div>
+</div>
+</div>
+<p class="footnote">
+          © 2026 Robust AI Workshop. Built for GitHub Pages.
+        </p>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-inner">
+<div class="footer-left">
+<div class="footer-brand">Robust AI Workshop</div>
+<div class="muted small">Hybrid workshop (Toronto • Vancouver • Online).</div>
+</div>
+<div class="footer-right">
+<div class="muted small">Online</div>
+<div class="footer-online">
+<a class="mono link" href="#" id="meetingLinkBottom" rel="noopener" target="_blank">TBA</a>
+<button class="btn btn-ghost btn-small" id="copyMeetingBottom" type="button">Copy</button>
+</div>
+</div>
+</div>
+</footer>
+<button aria-label="Back to top" class="to-top" id="toTop" type="button">↑</button>
+<script defer="" src="workshop.js"></script>
+</body>
+</html>
