@@ -58,18 +58,18 @@ const AGENDA = [
     title: "Lunch Break",
     speakers: [],
     mode: "Hybrid",
-    details: "Guelph / Brunch at SFU during lunch break."
+    details: "York University / Brunch at SFU during lunch break."
   },
   {
     type: "TECH",
     startISO: "2026-03-12T13:45:00-04:00",
     title: "Technical Session Part I",
-    speakers: ["Amirhossein Ansari", "Sonal Allana", "Zhuoxin Zhan"],
+    speakers: ["Amirhossein Ansari", "Zhuoxin Zhan", "Dr. Dilli Prasad Sharma"],
     mode: "Hybrid",
     details:
-      "• Out-of-Distribution Detection for Trustworthy Machine Learning — Amirhossein Ansari\n" +
-      "• Privacy Enhancing Technologies in Explainable AI — Sonal Allana\n" +
-      "• Adversarial Robustness for Trustworthy Machine Learning — Zhuoxin Zhan"
+      "• Out-of-Distribution Detection for Trustworthy Machine Learning — Amirhossein Ansari(Doctoral Candidate, SFU)\n" +
+      "• Adversarial Robustness for Trustworthy Machine Learning — Zhuoxin Zhan(Doctoral Candidate, SFU)\n" +
+      "• Enhancing Adversarial Robust IoT Intrusion Detection via SHAP Attribution Fingerprinting — Dr. Dilli Prasad Sharma(Postdoctoral Researcher, York University)"
   },
   {
     type: "BREAK",
@@ -83,18 +83,26 @@ const AGENDA = [
     type: "TECH",
     startISO: "2026-03-12T15:00:00-04:00",
     title: "Technical Session Part II",
-    speakers: ["Assistant Prof. Liang Xue", "Dr. Dilli Prasad Sharma"],
+    speakers: ["Assistant Prof. Liang Xue", "Sonal Allana"],
     mode: "Hybrid",
     details:
-      "• A Generic Framework for Privacy Risk Assessment of Machine Learning Models — Assistant Prof. Liang Xue\n" +
-      "• Enhancing Adversarial Robust IoT Intrusion Detection via SHAP Attribution Fingerprinting — Dr. Dilli Prasad Sharma"
+      "• A Generic Framework for Privacy Risk Assessment of Machine Learning Models — Dr. Liang Xue(Assistant Professor, York University)\n" +
+      "• Privacy Enhancing Technologies in Explainable AI — Sonal Allana(Doctoral Candidate, UoG)\n"
+  },
+  {
+    type: "BREAK",
+    startISO: "2026-03-12T15:40:00-04:00",
+    title: "Online Streaming Ends",
+    speakers: [],
+    mode: "Online",
+    details: "Thank you for joining us online! The remainder of the workshop will be in-person only."
   },
   {
     type: "NETWORK",
     startISO: "2026-03-12T15:40:00-04:00",
     title: "Poster Session / Networking",
     speakers: [],
-    mode: "Hybrid",
+    mode: "In-person",
     details: "Showcasing project publications and research contributions."
   },
   {
@@ -111,6 +119,9 @@ const SPEAKERS = [
   {
     name: "Dr. Lovedeep Gondara",
     role: "Head of AI Research & Development at Vanguard (Toronto)",
+    org: "Vanguard (Toronto)",
+    photo: "assets/people/lovedeep-gondara.jpg",
+    links: [{ label: "Bio", url: "https://www.linkedin.com/in/lovedeepg/" }],
     talk: "Keynote: The Importance of Trustworthy AI in Heavily Regulated Domains",
     abstract:
       "The deployment of AI systems in heavily regulated domains such as healthcare and finance presents unique challenges that extend beyond " +
@@ -123,18 +134,23 @@ const SPEAKERS = [
       "standards, and mechanisms for human oversight and intervention.\n" +
       "We argue that trustworthiness is not merely an ethical desideratum but a practical necessity: systems that fail to earn stakeholder trust " +
       "face regulatory barriers, adoption resistance, and reputational risk. By drawing parallels between both heavily regulated domains, we " +
-      "identify transferable lessons for building AI systems that meet the elevated standards these domains demand."
+      "identify transferable lessons for building AI systems that meet the elevated standards these domains demand.",
+    bio: "Dr. Lovedeep Gondara is the Head of AI Research & Development at Vanguard, Toronto, where he leads a team of AI engineers and scientists working on generative AI, natural language processing, and responsible AI. He holds an adjunct professor appointment at the University of British Columbia's School of Population and Public Health. Previously, he served as Research Scientist Team Lead at BC Cancer Registry, where he developed and deployed NLP solutions for various clinical applications. Lovedeep received his Ph.D. in Computer Science from Simon Fraser University and has authored over 90 publications spanning machine learning, statistics, and healthcare."
   },
   {
     name: "Dr. Zihang Xiang",
     role: "Postdoctoral Researcher （Department of ECE, UCLA）",
+    org: "UCLA",
+    photo: "assets/people/zihang-xiang.jpg",
+    links: [{ label: "Bio", url: "https://www.linkedin.com/in/zihang-xiang/" }],
     talk: "Keynote: Modern Privacy-Preserving Machine Learning: Principled Design and Audit",
     abstract:
       "Modern machine learning relies on vast amounts of sensitive data, creating a fundamental tension between utility and privacy. " +
       "While differential privacy (DP) provides a rigorous mathematical framework for protecting individuals, significant challenges remain. " +
       "In this talk, I present a research program built on two complementary pillars: designing differentially private algorithms for " +
       "complex machine learning systems, and developing principled auditing tools to empirically validate privacy claims.\n" +
-      "Keywords: Private machine learning, data privacy"
+      "Keywords: Private machine learning, data privacy",
+    bio: "Dr. Zihang Xiang is a Postdoctoral Researcher in the Department of Electrical and Computer Engineering at UCLA, working with Prof. Yuan Tian. He received his Ph.D. in Computer Science from KAUST, advised by Prof. Di Wang.\nHis research focuses on privacy-preserving machine learning, with an emphasis on developing rigorous and falsifiable privacy guarantees for modern ML systems. In particular, he studies differential privacy and design principled learning algorithms and builds tools to audit and verify privacy claims. His work spans graph neural networks, federated learning, large-scale model training, and privacy auditing.\n\nHis research has been published in leading venues including IEEE S&P, USENIX Security, NDSS, SIGMOD, NeurIPS, and Science Advances. His broader goal is to help reconcile the tension between powerful data-driven models and strong individual privacy guarantees."
   },
   {
     name: "Amirhossein Ansari",
@@ -237,7 +253,7 @@ const PEOPLE = [
       { label: "SFU Profile", url: "https://www.sfu.ca/fas/computing/people/faculty/faculty-members/wangk.html" },
       { label: "Homepage", url: "https://www.cs.sfu.ca/~wangk/" }
     ],
-    bio: "Ke Wang received Ph.D from Georgia Institute of Technology. He is currently a professor at School of Computing Science, Simon Fraser University. Ke Wang's research interests include database technology, data mining and knowledge discovery, with emphasis on massive datasets, graph and network data, and data privacy. He is particularly interested in combining the strengths of database, statistics, machine learning and optimization to provide actionable solutions to real life problems and industrial applications. Ke Wang has published in database, information retrieval, and data mining conferences, including SIGMOD, SIGIR, PODS, VLDB, ICDE, EDBT, SIGKDD, SDM, ICDM, WWW, AAAI, and CIKM. He co-authored a book \"Introduction to Privacy-Preserving Data Publishing: Concepts and Techniques\", Data Mining and Knowledge Discovery Series, Chapman & Hall/CRC, August 2010. He was an associate editor of the ACM TKDD journal, associate editor of the IEEE TKDE journal, an editorial board member for Journal of Data Mining and Knowledge Discovery. He has been the general co-chair for the SIAM Conference on Data Mining 2015 and 2016, and the PC co-chair for SIAM Conference on Data Mining 2008 and the PC co-chair for IEEE International Conference on Intelligence and Security Informatics (ISI) 2010."
+    bio: "Ke Wang received Ph.D from Georgia Institute of Technology. He is currently a professor at School of Computing Science, Simon Fraser University. Ke Wang's research interests include database technology, data mining and knowledge discovery. He was an associate editor of the ACM TKDD journal, an associate editor of the IEEE TKDE journal, an editorial board member for Journal of Data Mining and Knowledge Discovery. He has been the general co-chairs for the SIAM Conference on Data Mining 2015 and 2016, the PC co-chair for SIAM Conference on Data Mining 2008, and the PC co-chair for IEEE International Conference on Intelligence and Security Informatics (ISI) 2010."
   },
 
   {
@@ -286,25 +302,43 @@ const PEOPLE = [
     links: [
       { label: "Google Scholar", url: "https://scholar.google.com/citations?hl=en&user=XRSx8pcAAAAJ" }
     ],
-    bio: "Sonal Allana is a PhD Candidate at the Data Management and Privacy Governance Lab at the University of Guelph. She is strongly interested in the ethical aspects of technology and its impact on society. Her current research area is at the intersection of privacy and explainability in artificial intelligence systems. She has previously worked in creating a safety framework for children’s IoT in collaboration with industry. Sonal is dedicated to student-centred learning and has extensive teaching experience in undergraduate and graduate courses in computer science and engineering. She has also worked in the industry as a software engineer and project lead, managing cross-functional teams in the successful delivery of high-value solutions."
+    bio: "Sonal Allana is a PhD Candidate at the Data Management and Privacy Governance Lab at the University of Guelph. She is strongly interested in the ethical aspects of technology and its impact on society. Her current research area is at the intersection of privacy and explainability in artificial intelligence systems. She has previously worked in creating a safety framework for children's IoT in collaboration with industry. Sonal is dedicated to student-centred learning and has extensive teaching experience in undergraduate and graduate courses in computer science and engineering. She has also worked in the industry as a software engineer and project lead, managing cross-functional teams in the successful delivery of high-value solutions."
   },
   {
-    group: "SPEAKER",
-    name: "Dr. Lovedeep Gondara",
-    org: "Vanguard (Toronto)",
-    role: "Keynote Speaker",
-    photo: "assets/people/lovedeep-gondara.jpg",
-    links: [{ label: "Bio", url: "https://www.linkedin.com/in/lovedeepg/" }],
-    bio: "Dr. Lovedeep Gondara is the Head of AI Research & Development at Vanguard, Toronto, where he leads a team of AI engineers and scientists working on generative AI, natural language processing, and responsible AI. He holds an adjunct professor appointment at the University of British Columbia's School of Population and Public Health. Previously, he served as Research Scientist Team Lead at BC Cancer Registry, where he developed and deployed NLP solutions for various clinical applications. Lovedeep received his Ph.D. in Computer Science from Simon Fraser University and has authored over 90 publications spanning machine learning, statistics, and healthcare."
+    group: "TEAM",
+    name: "Haichuan Xue",
+    org: "York University",
+    role: "Team Member",
+    photo: "assets/people/haichuan-xue.jpg",
+    links: [],
+    bio: "Hi I'm Haichuan Xue. I'm honored to participate in this research workshop as a student under Dr. Liang Xue, and to contribute as an assistant in any way I can. This workshop has greatly expanded my understanding towards privacy-preserving technologies and has been a truly valuable learning experience as I am currently pursuing a Master of Arts in Information Systems & Technology (MASIT) at York University. My research interests include privacy protection and AI security."
   },
   {
-    group: "SPEAKER",
-    name: "Dr. Zihang Xiang",
-    org: "UCLA",
-    role: "Keynote Speaker",
-    photo: "assets/people/zihang-xiang.jpg",
-    links: [{ label: "Bio", url: "https://www.linkedin.com/in/zihang-xiang/" }],
-    bio: "Dr. Zihang Xiang is a Postdoctoral Researcher in the Department of Electrical and Computer Engineering at UCLA, working with Prof. Yuan Tian. He received his Ph.D. in Computer Science from KAUST, advised by Prof. Di Wang.\nHis research focuses on privacy-preserving machine learning, with an emphasis on developing rigorous and falsifiable privacy guarantees for modern ML systems. In particular, he studies differential privacy and design principled learning algorithms and builds tools to audit and verify privacy claims. His work spans graph neural networks, federated learning, large-scale model training, and privacy auditing.\n\nHis research has been published in leading venues including IEEE S&P, USENIX Security, NDSS, SIGMOD, NeurIPS, and Science Advances. His broader goal is to help reconcile the tension between powerful data-driven models and strong individual privacy guarantees."
+    group: "TEAM",
+    name: "Nima Forouzi",
+    org: "Simon Fraser University",
+    role: "Team Member",
+    photo: "assets/people/Nima.jpg",
+    links: [],
+    bio: "Nima Forouzi is a PhD student in Computing Science at Simon Fraser University. His research focuses on artificial intelligence and machine learning, with interests in developing practical algorithms and data-driven approaches to solve complex problems. His work aims to advance AI methodologies and real-world applications, while contributing to academic research, publications, and collaborative projects within the broader computing science community."
+  },
+  {
+    group: "TEAM",
+    name: "Xiaowei Sun",
+    org: "York University",
+    role: "Team Member",
+    photo: "assets/people/xiaowei-sun.png",
+    links: [],
+    bio: "Xiaowei Sun is a Master of Arts student in Information Systems & Technology (MAIST) at York University, Canada. His research interests include differential privacy, explainable artificial intelligence, and trustworthy machine learning. His current work focuses on privacy and robustness evaluation of machine learning systems, with particular emphasis on the design and analysis of privacy attacks and defenses, as well as testbed-driven frameworks for systematically assessing privacy–utility–explainability trade-offs in practical deployment settings."
+  },
+  {
+    group: "TEAM",
+    name: "Ehsan Hoseinzade",
+    org: "Simon Fraser University",
+    role: "Team Member",
+    photo: "assets/people/Ehsan.png",
+    links: [],
+    bio: "Ehsan is a PhD candidate in Computer Science at Simon Fraser University. His research interests focus on the application of Large Language Models (LLMs) and Graph Neural Networks (GNNs) to tabular data. He also works on sequence modeling architectures, including Transformers and Mamba, as well as deep learning applications for financial time-series prediction."
   }
 ];
 
@@ -763,20 +797,118 @@ function initPeople() {
 }
 
 /* =========================
-   Speakers / Presenters
+   Keynote Speakers (first 2)
    ========================= */
 
-function initSpeakers() {
-  const grid = $("#speakerGrid");
-  const search = $("#speakerSearch");
-  const count = $("#speakerCount");
+function initKeynoteSpeakers() {
+  const grid = $("#keynoteGrid");
+  if (!grid) return;
+
+  const renderSpeaker = (s) => {
+    const links = (s.links || [])
+      .map((l) => `<a class="person__link" href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(l.label)}</a>`)
+      .join("");
+
+    const shortAbs = (s.abstract || "").slice(0, 260);
+    const needsMoreAbs = (s.abstract || "").length > 260;
+
+    const shortBio = (s.bio || "").slice(0, 240);
+    const needsMoreBio = (s.bio || "").length > 240;
+
+    return `
+      <article class="card speaker" data-name="${escapeHtml(s.name)}">
+        <div class="speaker__top">
+          <img class="avatar" src="${escapeHtml(s.photo || '')}" alt="${escapeHtml(s.name)}" loading="lazy" />
+          <div>
+            <div class="speaker__name">${escapeHtml(s.name)}</div>
+            <div class="speaker__role">${escapeHtml(s.role)}</div>
+          </div>
+        </div>
+
+        <div class="speaker__talk">${escapeHtml(s.talk || "")}</div>
+
+        <p class="speaker__abstract">
+          <span class="speaker__absText">${escapeHtml(needsMoreAbs ? shortAbs + "…" : (s.abstract || ""))}</span>
+        </p>
+        ${needsMoreAbs ? `<button class="speaker__more" data-type="abstract" type="button">Read more</button>` : ""}
+
+        ${s.bio ? `
+          <div class="person__bio">
+            <span class="person__bioText">${escapeHtml(needsMoreBio ? shortBio + "…" : s.bio)}</span>
+          </div>
+          ${needsMoreBio ? `<button class="person__more" data-type="bio" type="button">Read more</button>` : ""}
+        ` : ""}
+
+        <div class="person__links">${links}</div>
+      </article>
+    `;
+  };
+
+  // Render first 2 speakers (keynote speakers)
+  const keynoteSpeakers = SPEAKERS.slice(0, 2);
+  grid.innerHTML = keynoteSpeakers.map(renderSpeaker).join("");
+
+  // Attach expanders for abstract
+  $$(".speaker__more", grid).forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest(".speaker");
+      const name = card?.dataset?.name;
+      const sp = SPEAKERS.find((s) => s.name === name);
+      const textEl = $(".speaker__absText", card);
+      if (!sp || !textEl) return;
+
+      const expanded = btn.dataset.expanded === "1";
+      if (expanded) {
+        textEl.textContent = sp.abstract.slice(0, 260) + "…";
+        btn.textContent = "Read more";
+        btn.dataset.expanded = "0";
+      } else {
+        textEl.textContent = sp.abstract;
+        btn.textContent = "Show less";
+        btn.dataset.expanded = "1";
+      }
+    });
+  });
+
+  // Attach expanders for bio
+  $$(".person__more", grid).forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest(".speaker");
+      const name = card?.dataset?.name;
+      const sp = SPEAKERS.find((s) => s.name === name);
+      const textEl = $(".person__bioText", card);
+      if (!sp || !textEl) return;
+
+      const expanded = btn.dataset.expanded === "1";
+      if (expanded) {
+        textEl.textContent = sp.bio.slice(0, 240) + "…";
+        btn.textContent = "Read more";
+        btn.dataset.expanded = "0";
+      } else {
+        textEl.textContent = sp.bio;
+        btn.textContent = "Show less";
+        btn.dataset.expanded = "1";
+      }
+    });
+  });
+}
+
+
+/* =========================
+   Technical Presenters (remaining speakers)
+   ========================= */
+
+function initTechnicalPresenters() {
+  const grid = $("#techPresenterGrid");
+  const search = $("#techPresenterSearch");
+  const count = $("#techPresenterCount");
   if (!grid || !search) return;
 
   let q = "";
 
   const matches = (s) => {
     if (!q) return true;
-    const hay = [s.name, s.role, s.org, s.talkTitle, s.abstract].join(" ");
+    const hay = [s.name, s.role, s.talk, s.abstract].join(" ");
     return normalize(hay).includes(q);
   };
 
@@ -792,13 +924,15 @@ function initSpeakers() {
       <article class="card speaker" data-name="${escapeHtml(s.name)}">
         <div class="speaker__top">
           <div>
-            <div class="speaker__name">${escapeHtml(s.name)}</div>
-            <div class="speaker__role">${escapeHtml(s.role)} • ${escapeHtml(s.org)}</div>
+            <div class="speaker__name">
+              ${escapeHtml(s.name)}
+              <a href="#people" class="speaker__profile-link" title="View full profile in Organizers & Team Members">View Profile →</a>
+            </div>
+            <div class="speaker__role">${escapeHtml(s.role)}</div>
           </div>
-          <span class="badge">${escapeHtml(s.category || "Presenter")}</span>
         </div>
 
-        <div class="speaker__talk">${escapeHtml(s.talkTitle || "")}</div>
+        <div class="speaker__talk">${escapeHtml(s.talk || "")}</div>
 
         <p class="speaker__abstract">
           <span class="speaker__absText">${escapeHtml(needsMore ? shortAbs + "…" : (s.abstract || ""))}</span>
@@ -812,13 +946,21 @@ function initSpeakers() {
   };
 
   const render = () => {
-    const items = SPEAKERS.filter(matches);
-    if (count) count.textContent = `${items.length} speaker(s)`;
+    // Get technical presenters (skip first 2 keynote speakers)
+    let technicalPresenters = SPEAKERS.slice(2);
+    // Reorder: move last 2 to front (Dr. Liang Xue and Dr. Dilli Prasad Sharma)
+    if (technicalPresenters.length >= 5) {
+      const lastTwo = technicalPresenters.slice(-2); // Get last 2
+      const firstThree = technicalPresenters.slice(0, -2); // Get first 3
+      technicalPresenters = [...lastTwo, ...firstThree]; // Reorder: last 2 first, then first 3
+    }
+    const items = technicalPresenters.filter(matches);
+    if (count) count.textContent = `${items.length} presenter(s)`;
 
     grid.innerHTML = items.map(renderSpeaker).join("");
 
     if (!items.length) {
-      grid.innerHTML = `<div class="card"><div class="muted"><strong>No matching speakers.</strong> Try a different keyword.</div></div>`;
+      grid.innerHTML = `<div class="card"><div class="muted"><strong>No matching presenters.</strong> Try a different keyword.</div></div>`;
     }
 
     $$(".speaker__more", grid).forEach((btn) => {
@@ -850,6 +992,7 @@ function initSpeakers() {
 
   render();
 }
+
 
 /* =========================
    Copy helpers
@@ -927,7 +1070,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initCountdown();
   initCalendar();
   initAgenda();
-  initSpeakers();
+  initKeynoteSpeakers();
+  initTechnicalPresenters();
   initPeople();
   initMeetingLinks();
   initCopyButtons();
