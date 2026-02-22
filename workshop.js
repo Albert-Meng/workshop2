@@ -303,7 +303,7 @@ const PEOPLE = [
     role: "Team Member",
     photo: "assets/people/haichuan-xue.jpg",
     links: [],
-    bio: "Hi I'm Haichuan Xue. I'm honored to participate in this research workshop as a student under Dr. Liang Xue, and to contribute as an assistant in any way I can. This workshop has greatly expanded my understanding towards privacy-preserving technologies and has been a truly valuable learning experience as I am currently pursuing a Master of Arts in Information Systems & Technology (MASIT) at York University. My research interests include privacy protection and AI security."
+    bio: "Haichuan Xue is a Master’s student in Information Systems & Technology (MASIT) at York University. His research interests include privacy protection and AI security."
   },
   {
     group: "TEAM",
@@ -321,7 +321,7 @@ const PEOPLE = [
     role: "Team Member",
     photo: "assets/people/xiaowei-sun.png",
     links: [],
-    bio: "Xiaowei Sun is a Master of Arts student in Information Systems & Technology (MAIST) at York University, Canada. His research interests include differential privacy, explainable artificial intelligence, and trustworthy machine learning. His current work focuses on privacy and robustness evaluation of machine learning systems, with particular emphasis on the design and analysis of privacy attacks and defenses, as well as testbed-driven frameworks for systematically assessing privacy–utility–explainability trade-offs in practical deployment settings."
+    bio: "Xiaowei Sun is a Master’s student in Information Systems & Technology (MAIST) at York University."
   },
   {
     group: "TEAM",
